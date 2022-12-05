@@ -7,7 +7,6 @@ int main(){
     int i,j;
 
     do{
-        
         scanf("%c", &choise_function);
         // switc(choise_function) {
         //     case 'A':
@@ -30,15 +29,15 @@ int main(){
             scanf("%d %d", &i, &j);  
             int answer = is_there_path(i, j);
             if(answer == 0){
-                printf("False");
+                printf("False \n");
             }
             else
-              printf("True");  
+              printf("True\n");  
         }
         else if (choise_function == 'C'){
-            scanf("%d %d", &i, &j);            
+            scanf("%d %d \n", &i, &j);            
             int answer = shortest_path(i,j);
-            printf("%d", &answer);    
+            printf("%d\n", answer);    
         }
 
     }while(choise_function != 'D');

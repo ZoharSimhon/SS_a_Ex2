@@ -10,8 +10,9 @@ void get_matrix_values (){
 			scanf("%d", &mat[row][col]);
 		}
 	}
+
 	//make the shortest path matrix
-	floyd_warshall_algorithm();	
+	floyd_warshall_algorithm();
 }
 
 
@@ -33,14 +34,16 @@ void floyd_warshall_algorithm (){
 	for (int k=0; k < size_mat; k++){
 		for (int row= 0; row<size_mat; row++){
 			for(int col= 0; col<size_mat; col++){
-				int sum_of_path_by_k = mat[row][k] + mat[k][col];
-				if(mat[row][col] == 0){
-					mat[row][col] = sum_of_path_by_k;
+				if(row != col){
+					if(mat[row][k] != 0 && mat[k][col] != 0){
+						int sum_of_path_by_k = mat[row][k] + mat[k][col];
+						if(mat[row][col]== 0){
+							mat[row][col] = sum_of_path_by_k;
+						}
+						else
+							mat[row][col] = min(mat[row][col], sum_of_path_by_k);
 				}
-				else if(sum_of_path_by_k != 0){
-					mat[row][col] = min(mat[row][col], sum_of_path_by_k);
 				}
-				//else (sum_of_path_by_k == 0 &&  mat[row][col] != 0) - don't chane the value in mat[row][col]
 			}
 		}
 	}

@@ -32,6 +32,8 @@ int main(){
             if(answer == 0){
                 printf("False");
             }
+            else
+              printf("True");  
         }
         else if (choise_function == 'C'){
             scanf("%d %d", &i, &j);            

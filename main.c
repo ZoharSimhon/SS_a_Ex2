@@ -28,11 +28,15 @@ int main(){
         }
         else if(choise_function == 'B'){
             scanf("%d %d", &i, &j);  
-            is_there_path(i, j);
+            int answer = is_there_path(i, j);
+            if(answer == 0){
+                printf("False");
+            }
         }
         else if (choise_function == 'C'){
-            scanf("%d %d", &i, &j);
-            shortest_path(i,j);
+            scanf("%d %d", &i, &j);            
+            int answer = shortest_path(i,j);
+            printf("%d", &answer);    
         }
 
     }while(choise_function != 'D');

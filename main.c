@@ -35,7 +35,7 @@ int main(){
               printf("True\n");  
         }
         else if (choise_function == 'C'){
-            scanf("%d %d \n", &i, &j);            
+            scanf("%d%d \n", &i, &j);            
             int answer = shortest_path(i,j);
             printf("%d\n", answer);    
         }

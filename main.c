@@ -40,7 +40,5 @@ int main(){
             printf("%d\n", answer);    
         }
 
-    }while(choise_function != 'D');
-
-    return 0;
+    }while(choise_function != 'D');{return 0;}
 }

@@ -29,7 +29,7 @@ int main(){
             scanf("%d %d", &i, &j);  
             int answer = is_there_path(i, j);
             if(answer == 0){
-                printf("False \n");
+                printf("False\n");
             }
             else
               printf("True\n");  
